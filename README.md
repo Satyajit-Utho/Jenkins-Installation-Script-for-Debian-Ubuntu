@@ -19,19 +19,19 @@ Internet connectivity
 📄 Script
 #!/bin/bash
 
-# Update the system package index
+Update the system package index
 apt update
 
-# Install necessary dependencies
+Install necessary dependencies
 apt install -y wget gnupg fontconfig openjdk-17-jre
 
-# Verify Java installation
+Verify Java installation
 java -version
 
-# Add Jenkins repository key
+Add Jenkins repository key
 wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 
-# Add Jenkins repository to sources list
+Add Jenkins repository to sources list
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | tee /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 📜 License
